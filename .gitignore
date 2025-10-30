@@ -19,8 +19,11 @@
 
 # production
 /build
+<<<<<<< Updated upstream
 .env
 .env.local
+=======
+>>>>>>> Stashed changes
 
 # misc
 .DS_Store
