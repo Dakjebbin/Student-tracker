@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
 
 import React from 'react'
 
 const Hero = () => {
     
+=======
+import React from 'react'
+
+const Hero = () => {
+>>>>>>> 6c4e3d4 (login)
   return (
     <section className='bg-[#ac192a1c]  pb-20'>
             <div className='flex items-center  md:w-[70%] w-[95%] m-auto justify-center flex-col pt-26'>

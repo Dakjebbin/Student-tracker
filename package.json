@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     "@clerk/nextjs": "^6.34.3",
     "axios": "^1.13.2",
@@ -29,19 +30,26 @@
     "tailwindcss": "^4",
     "typescript": "^5"
 =======
+=======
+    "lucide-react": "^0.552.0",
+    "next": "16.0.1",
+>>>>>>> 6c4e3d4 (login)
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "next": "16.0.1"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
+<<<<<<< HEAD
     "eslint-config-next": "16.0.1"
 >>>>>>> Stashed changes
+=======
+    "eslint-config-next": "16.0.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+>>>>>>> 6c4e3d4 (login)
   }
 }
