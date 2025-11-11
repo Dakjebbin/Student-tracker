@@ -7,6 +7,11 @@ export const POST = async (request: Request) => {
     try {
         
         const {userId} = await auth()
+<<<<<<< HEAD
+=======
+        console.log(userId);
+        
+>>>>>>> 398b559 (done)
 
         if (!userId) {
             return NextResponse.json({
@@ -40,11 +45,19 @@ export const POST = async (request: Request) => {
             data: updateUser
         },{status:200})
 
+<<<<<<< HEAD
     } catch (error:any) {
         console.error(`Error creating user:, ${error.message}`);
         return NextResponse.json({
             success: false,
             message:`Internal Server Error ${error.message}`
+=======
+    } catch (error) {
+        console.error("Error creating user:", error);
+        return NextResponse.json({
+            success: false,
+            message: "Internal Server Error",
+>>>>>>> 398b559 (done)
             
         },{
             status:500

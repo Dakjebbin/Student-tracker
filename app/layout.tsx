@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import {
   ClerkProvider,
   SignedIn,
   SignedOut,
+=======
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+>>>>>>> 398b559 (done)
 } from '@clerk/nextjs'
 import { Outfit } from "next/font/google";
 import "./globals.css";
@@ -52,6 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <ClerkProvider>
     <html lang="en">
@@ -71,6 +82,9 @@ export default function RootLayout({
     </html>
     </ClerkProvider>
 =======
+=======
+    <ClerkProvider>
+>>>>>>> 398b559 (done)
     <html lang="en">
       <body
         className={`${outfit.variable} antialiased`}
@@ -78,6 +92,10 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+    </ClerkProvider>
+>>>>>>> 398b559 (done)
   );
 }

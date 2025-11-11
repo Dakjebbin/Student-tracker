@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 398b559 (done)
 import {
   SignInButton,
   SignUpButton,
@@ -8,9 +11,12 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
+<<<<<<< HEAD
 =======
 import React from 'react'
 >>>>>>> 6c4e3d4 (login)
+=======
+>>>>>>> 398b559 (done)
 
 const Header = () => {
   return (
@@ -22,10 +28,14 @@ const Header = () => {
                 </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* 
 =======
 
 >>>>>>> 6c4e3d4 (login)
+=======
+{/* 
+>>>>>>> 398b559 (done)
             <div className='flex gap-4'>
                
                 <button className='text-[#ac1929] font-semibold md:text-lg text-base'>
@@ -36,6 +46,9 @@ const Header = () => {
                 <button className='bg-[#ac1929] md:px-6 px-4 md:py-2 py-1 text-nowrap text-white font-semibold rounded-lg'>
                   <Link href="/register">Sign Up</Link></button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 398b559 (done)
             </div> */}
 
 <header className="flex justify-end items-center p-4 gap-4 h-16">
@@ -54,9 +67,12 @@ const Header = () => {
               <UserButton />
             </SignedIn>
           </header>
+<<<<<<< HEAD
 =======
             </div>
 >>>>>>> 6c4e3d4 (login)
+=======
+>>>>>>> 398b559 (done)
     </header>
   )
 }

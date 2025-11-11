@@ -10,7 +10,10 @@
   },
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 398b559 (done)
     "@clerk/nextjs": "^6.34.3",
     "axios": "^1.13.2",
     "lucide-react": "^0.552.0",

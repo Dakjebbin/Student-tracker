@@ -7,8 +7,11 @@ import {
   DropletIcon,
   FileTextIcon,
 } from 'lucide-react'
+<<<<<<< HEAD
 import axios from 'axios'
 import toast from 'react-hot-toast'
+=======
+>>>>>>> 398b559 (done)
 interface HealthHistoryFormProps {
   onSubmit: (data: any) => void
 }
@@ -17,6 +20,7 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
     age: '',
     weight: '',
     height: '',
+<<<<<<< HEAD
     bloodType: '',
     sleepHours: "",
     waterLitres: ""
@@ -66,6 +70,16 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
     }finally{
       setLoading(false)
     }
+=======
+    bloodType: 'A+',
+    conditions: '',
+    medications: '',
+    allergies: '',
+  })
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    onSubmit(formData)
+>>>>>>> 398b559 (done)
   }
   const handleChange = (
     e: React.ChangeEvent<
@@ -136,6 +150,7 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -172,6 +187,8 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
             </div>
           </div>
         </div>
+=======
+>>>>>>> 398b559 (done)
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Blood Type
@@ -184,7 +201,10 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
               onChange={handleChange}
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             >
+<<<<<<< HEAD
               <option value="">Please Select One</option>
+=======
+>>>>>>> 398b559 (done)
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>
@@ -196,12 +216,62 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
             </select>
           </div>
         </div>
+<<<<<<< HEAD
         
         <button
           type="submit"
           className="w-full cursor-pointer bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
         >
          {loading ? "Loading ..." : "Submit Health Information"}
+=======
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Medical Conditions
+          </label>
+          <div className="relative">
+            <FileTextIcon className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
+            <textarea
+              name="conditions"
+              value={formData.conditions}
+              onChange={handleChange}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+              placeholder="List any medical conditions"
+              rows={3}
+            />
+          </div>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Current Medications
+          </label>
+          <textarea
+            name="medications"
+            value={formData.medications}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+            placeholder="List any current medications"
+            rows={3}
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Allergies
+          </label>
+          <textarea
+            name="allergies"
+            value={formData.allergies}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+            placeholder="List any allergies"
+            rows={2}
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        >
+          Submit Health Information
+>>>>>>> 398b559 (done)
         </button>
       </form>
     </div>
