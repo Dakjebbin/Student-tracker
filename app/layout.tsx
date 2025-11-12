@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
   SignedIn,
   SignedOut,
-  UserButton,
 } from '@clerk/nextjs'
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import Home from "./components/Home";
+import { Toaster } from "react-hot-toast";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -33,7 +32,15 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased`}
       >
+       <SignedIn>
+        <Toaster/>
         {children}
+      </SignedIn>
+      <SignedOut>
+        <div>
+        <Home/>
+        </div>
+      </SignedOut>
       </body>
     </html>
     </ClerkProvider>
