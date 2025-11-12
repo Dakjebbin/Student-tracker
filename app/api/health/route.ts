@@ -8,10 +8,13 @@ export const POST = async (request: Request) => {
         
         const {userId} = await auth()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         console.log(userId);
         
 >>>>>>> 398b559 (done)
+=======
+>>>>>>> 4110823 (dne)
 
         if (!userId) {
             return NextResponse.json({
@@ -46,6 +49,7 @@ export const POST = async (request: Request) => {
         },{status:200})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error:any) {
         console.error(`Error creating user:, ${error.message}`);
         return NextResponse.json({
@@ -58,6 +62,13 @@ export const POST = async (request: Request) => {
             success: false,
             message: "Internal Server Error",
 >>>>>>> 398b559 (done)
+=======
+    } catch (error:any) {
+        console.error(`Error creating user:, ${error.message}`);
+        return NextResponse.json({
+            success: false,
+            message:`Internal Server Error ${error.message}`
+>>>>>>> 4110823 (dne)
             
         },{
             status:500

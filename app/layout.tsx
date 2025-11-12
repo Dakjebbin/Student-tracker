@@ -9,12 +9,13 @@ import {
 =======
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
   SignedIn,
   SignedOut,
+<<<<<<< HEAD
   UserButton,
 >>>>>>> 398b559 (done)
+=======
+>>>>>>> 4110823 (dne)
 } from '@clerk/nextjs'
 import { Outfit } from "next/font/google";
 import "./globals.css";
@@ -71,6 +72,7 @@ export default function RootLayout({
       >
        <SignedIn>
         <Toaster/>
+<<<<<<< HEAD
         {children}
       </SignedIn>
       <SignedOut>
@@ -89,7 +91,15 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased`}
       >
+=======
+>>>>>>> 4110823 (dne)
         {children}
+      </SignedIn>
+      <SignedOut>
+        <div>
+        <Home/>
+        </div>
+      </SignedOut>
       </body>
     </html>
 <<<<<<< HEAD

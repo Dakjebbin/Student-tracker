@@ -8,10 +8,15 @@ import {
   FileTextIcon,
 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import axios from 'axios'
 import toast from 'react-hot-toast'
 =======
 >>>>>>> 398b559 (done)
+=======
+import axios from 'axios'
+import toast from 'react-hot-toast'
+>>>>>>> 4110823 (dne)
 interface HealthHistoryFormProps {
   onSubmit: (data: any) => void
 }
@@ -20,6 +25,7 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
     age: '',
     weight: '',
     height: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     bloodType: '',
     sleepHours: "",
@@ -75,11 +81,62 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
     conditions: '',
     medications: '',
     allergies: '',
+=======
+    bloodType: '',
+    sleepHours: "",
+    waterLitres: ""
+>>>>>>> 4110823 (dne)
   })
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false)
+
+  const baseUrl:string = process.env.NEXT_PUBLIC_API_URL || "/api"
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+<<<<<<< HEAD
     onSubmit(formData)
 >>>>>>> 398b559 (done)
+=======
+    if (!formData) {
+      return toast.error("Please fill all fields")
+    }
+    
+    setLoading(true)
+    try {
+      const response = await axios.post(`${baseUrl}/api/health`,{
+        ...formData
+      },{
+        withCredentials:true
+      })
+    
+      
+
+      if (response.status === 200) {
+        toast.success("Succesfully Updated")
+        onSubmit(response.data.data);
+        setFormData({
+          age: "",
+          weight: "",
+          height: "",
+          bloodType: "",
+          sleepHours: "",
+          waterLitres: ""
+        });
+      }else{
+        toast.error("Something went wrong")
+      }
+    } catch (error) {
+      if (error instanceof axios.AxiosError) {
+        toast.error(
+           error?.response?.data?.message
+         );
+       } else {
+         toast.error(`reg error => , ${error}`);
+       }
+    }finally{
+      setLoading(false)
+    }
+>>>>>>> 4110823 (dne)
   }
   const handleChange = (
     e: React.ChangeEvent<
@@ -151,6 +208,9 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4110823 (dne)
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -187,8 +247,11 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 >>>>>>> 398b559 (done)
+=======
+>>>>>>> 4110823 (dne)
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Blood Type
@@ -202,9 +265,13 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <option value="">Please Select One</option>
 =======
 >>>>>>> 398b559 (done)
+=======
+              <option value="">Please Select One</option>
+>>>>>>> 4110823 (dne)
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>
@@ -216,6 +283,7 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
             </select>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <button
@@ -266,12 +334,19 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
             rows={2}
           />
         </div>
+=======
+        
+>>>>>>> 4110823 (dne)
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+          className="w-full cursor-pointer bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
         >
+<<<<<<< HEAD
           Submit Health Information
 >>>>>>> 398b559 (done)
+=======
+         {loading ? "Loading ..." : "Submit Health Information"}
+>>>>>>> 4110823 (dne)
         </button>
       </form>
     </div>
