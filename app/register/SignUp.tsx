@@ -6,22 +6,6 @@ import Header from '../components/Header'
 import Image from 'next/image'
 export function SignUp() {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  })
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate signup - in production, this would call an API
-  }
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
   return (
     <>
     <Header/>
@@ -38,7 +22,7 @@ export function SignUp() {
               Start tracking your health today
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name

@@ -1,6 +1,5 @@
 "use client"
-import React, { useState } from 'react'
-import { HeartPulseIcon, MailIcon, LockIcon } from 'lucide-react'
+import {  MailIcon, LockIcon } from 'lucide-react'
 import Link from 'next/link'
 import Header from '../components/Header'
 import Image from 'next/image'
@@ -20,7 +19,7 @@ export function Login() {
             <p className='font-bold md:text-2xl text-lg'>JUST<span className='font-bold text-[#ac1929]'>+</span>HEALTH</p>
             <p className="text-gray-600 mt-2">Sign in to your account</p>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email
@@ -29,8 +28,6 @@ export function Login() {
                 <MailIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ac1912] focus:border-transparent outline-none"
                   placeholder="Enter your email"
                   required
@@ -45,8 +42,6 @@ export function Login() {
                 <LockIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ac1912] focus:border-transparent outline-none"
                   placeholder="Enter your password"
                   required
