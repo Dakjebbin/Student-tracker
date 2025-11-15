@@ -1,6 +1,5 @@
 "use client"
-import React, { useState } from 'react'
-import { HeartPulseIcon, MailIcon, LockIcon, UserIcon } from 'lucide-react'
+import {  MailIcon, LockIcon, UserIcon } from 'lucide-react'
 import Link from 'next/link'
 import Header from '../components/Header'
 import Image from 'next/image'
@@ -32,8 +31,6 @@ export function SignUp() {
                 <input
                   type="text"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ac1912] focus:border-transparent outline-none"
                   placeholder="Enter your full name"
                   required
@@ -49,8 +46,6 @@ export function SignUp() {
                 <input
                   type="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ac1912] focus:border-transparent outline-none"
                   placeholder="Enter your email"
                   required
@@ -66,8 +61,6 @@ export function SignUp() {
                 <input
                   type="password"
                   name="password"
-                  value={formData.password}
-                  onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ac1912] focus:border-transparent outline-none"
                   placeholder="Create a password"
                   required
@@ -83,8 +76,6 @@ export function SignUp() {
                 <input
                   type="password"
                   name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ac1912] focus:border-transparent outline-none"
                   placeholder="Confirm your password"
                   required
