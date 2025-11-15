@@ -16,7 +16,7 @@ const Header = () => {
       <div>
         <Link href="/" className="flex items-center h-16">
           <Image src="/logo.svg" width={100} height={100} alt="logo" />
-          <p className="font-semibold md:text-2xl text-lg">
+          <p className="font-semibold md:text-2xl md:block hidden text-lg">
             JUST<span className="font-bold text-[#ac1929]">+</span>HEALTH
           </p>
         </Link>
