@@ -1,3 +1,4 @@
+import { SignUpButton } from '@clerk/nextjs'
 import React from 'react'
 
 const Hero = () => {
@@ -12,9 +13,15 @@ const Hero = () => {
           Comprehensive healthcare tracking platform designed for students.
           Monitor your wellness, get personalized solutions, and visualize your progress.
         </p>
-        <button className="bg-[#ac1912] my-10 px-7 py-3 rounded-lg cursor-pointer text-white text-lg font-semibold">
-          Get Started Free
-        </button>
+
+        <SignUpButton>
+            <button className="bg-[#ac1929] md:px-6 px-4 md:py-2 py-1 cursor-pointer text-nowrap text-white font-semibold rounded-lg">
+            Get Started Free
+            </button>
+          </SignUpButton>
+
+    
+        
       </div>
 
       <div className='mt-6 flex md:gap-8 gap-3 flex-wrap w-[97%] m-auto'>
