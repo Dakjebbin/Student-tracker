@@ -5,14 +5,7 @@ import Link from 'next/link'
 import Header from '../components/Header'
 import Image from 'next/image'
 export function Login() {
-//   const navigate = useNavigate()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate login - in production, this would call an API
-  
-  }
+
   return (
     <>
     <Header/>
