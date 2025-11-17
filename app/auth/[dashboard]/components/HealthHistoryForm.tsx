@@ -24,7 +24,7 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
   });
 
   const [loading, setLoading] = useState(false);
-  const baseUrl: string = process.env.NEXT_PUBLIC_API_URL || "/api";
+  // const baseUrl: string = process.env.NEXT_PUBLIC_API_URL || "/api";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,9 +44,9 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${baseUrl}/api/health`,
+        `/api/health`,
         { ...formData },
-        { withCredentials: true }
+      
       );
 
       if (response.status === 200) {
