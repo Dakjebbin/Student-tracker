@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^6.34.3",
     "axios": "^1.13.2",
+    "cors": "^2.8.5",
     "lucide-react": "^0.552.0",
     "mongoose": "^8.19.3",
     "next": "16.0.1",
