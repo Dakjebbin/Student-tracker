@@ -44,7 +44,7 @@ export function HealthHistoryForm({ onSubmit }: HealthHistoryFormProps) {
     setLoading(true);
     try {
       const response = await axios.post(
-        `/api/health`,
+        "/api/health",
         { ...formData },
       
       );
