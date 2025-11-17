@@ -3,7 +3,7 @@ export function corsResponse(data: any, status = 200) {
       status,
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "https://student-tracker-orcin.vercel.app",
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type, Authorization",
       },
